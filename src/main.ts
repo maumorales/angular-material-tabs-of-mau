@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './app/material-module';
 
 import {TabGroupThemeExample} from './app/tab-group-theme-example';
+import { TabsModule } from './app/tabs/tabs.module';
 
 @NgModule({
   imports: [
@@ -20,6 +21,9 @@ import {TabGroupThemeExample} from './app/tab-group-theme-example';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+
+    // my stuff
+    TabsModule,
   ],
   entryComponents: [TabGroupThemeExample],
   declarations: [TabGroupThemeExample],
