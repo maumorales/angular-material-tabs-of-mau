@@ -4,12 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { MyViewComponent } from './my-view/my-view.component';
 
 const routes: Routes = [
-  { path: 'my-view', component: MyViewComponent }
+  { path: '', component: MyViewComponent }
 ];
 
 @NgModule({
   imports: [ RouterModule.forChild(routes) ],
-  exports: [ RouterModule ]
+  exports: [ RouterModule ],
+  declarations: [MyViewComponent]
 })
 export class TabsRoutingModule {
 }
