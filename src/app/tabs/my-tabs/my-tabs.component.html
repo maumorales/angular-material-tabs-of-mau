@@ -1,6 +1,7 @@
 <p>in my tabs component</p>
 
-<mat-tab-group backgroundColor="gray" color="black">
+<mat-tab-group backgroundColor="gray"
+               color="black">
   <mat-tab label="First">
     <ng-template matTabContent>
       The First Content
@@ -12,3 +13,22 @@
     </ng-template>
   </mat-tab>
 </mat-tab-group>
+
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     routerLink="/entry/1"
+     routerLinkActive
+     #rla1="routerLinkActive"
+     [routerLinkActiveOptions]="{exact: true}"
+     [active]="rla1.isActive">
+    One {{rla1.isActive}} {{rla1.routerLinkActive}},
+  </a>
+  <a mat-tab-link
+     routerLink="/entry/2"
+     [routerLinkActive]
+     #rla2="routerLinkActive"
+     [routerLinkActiveOptions]="{exact: true}"
+     [active]="rla2.isActive">
+    Two {{rla2.isActive}} {{rla2.routerLinkActive}},
+  </a>
+</nav>
